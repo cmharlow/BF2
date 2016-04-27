@@ -1,16 +1,9 @@
 import rdflib
 from rdflib.namespace import DCTERMS
-from gittle import Gittle
-import os
+import subprocess
 
 bf2url = 'http://id.loc.gov/ontologies/bibframe.rdf'
 bfURI = 'http://id.loc.gov/ontologies/bibframe/'
-
-repo_path = '.'
-repo_url = 'git@github.com:cmh2166/BF2.git'
-repo = Gittle(repo_path, origin_uri=repo_url)
-key_file = open(os.environ['PRIVATE_KEY_DIR'])
-repo.auth(pkey=key_file)
 
 
 def writeBF2(graph):
@@ -21,7 +14,12 @@ def writeBF2(graph):
 
 
 def diffDate(oldBF, newBF):
-    oldBFdate = oldBF.value(rdflib.URIRef(bfURI), DCTERMS.modified).toPython()
+    oldBFdate = oldBF.value(rdflib.URIRef(bfURI), DCTERMS.modified)
+    if not oldBFdate:
+        for obj in oldBF.objects((None, DCTERMS.modified)):
+            oldBFdate = obj.toPython()
+    else:
+        oldBFdate = oldBF.toPython()
     newBFdate = newBF.value(rdflib.URIRef(bfURI), DCTERMS.modified).toPython()
     if oldBFdate == newBFdate:
         return(False, None)
@@ -32,7 +30,7 @@ def diffDate(oldBF, newBF):
 def main():
     """Grab Bibframe 2 RDF spec from id.loc.gov hourly, check for diffs."""
     # Get any changes made directly to GitHub BF2 repo first.
-    repo.pull()
+    subprocess.run(["git", "pull", "origin", "master"])
 
     # Get the most recent BF2 Spec from id.loc.gov
     newbf2rdf = rdflib.Graph().parse(bf2url)
@@ -45,10 +43,8 @@ def main():
     if updates:
         writeBF2(newbf2rdf)
         # Stage, Commit and Push any changes
-        repo.stage('BF2specs/*')
-        repo.commit(name='Christina Harlow', email='cmharlow@gmail.com',
-                    message='pulling latest BF2 updates of: ' + str(date))
-        repo.push()
+        subprocess.Popen(["git", "commit", "BF2specs/"])
+        subprocess.Popen(["git", "push", "origin", "master"])
 
 
 if __name__ == '__main__':
