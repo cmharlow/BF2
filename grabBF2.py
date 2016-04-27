@@ -1,9 +1,16 @@
 import rdflib
 from rdflib.namespace import DCTERMS
-import subprocess
+from git import Repo
 
 bf2url = 'http://id.loc.gov/ontologies/bibframe.rdf'
 bfURI = 'http://id.loc.gov/ontologies/bibframe/'
+
+repo = Repo('/Users/Christina/Projects/BF2')
+assert not repo.bare
+config = repo.config_writer()
+config.set_value("user", "email", "cmharlow@gmail.com")
+config.set_value("user", "name", "cmh2166")
+index = repo.index
 
 
 def writeBF2(graph):
@@ -30,7 +37,8 @@ def diffDate(oldBF, newBF):
 def main():
     """Grab Bibframe 2 RDF spec from id.loc.gov hourly, check for diffs."""
     # Get any changes made directly to GitHub BF2 repo first.
-    subprocess.run(["git", "pull", "origin", "master"])
+    o = repo.remotes.origin
+    o.pull()
 
     # Get the most recent BF2 Spec from id.loc.gov
     newbf2rdf = rdflib.Graph().parse(bf2url)
@@ -43,8 +51,9 @@ def main():
     if updates:
         writeBF2(newbf2rdf)
         # Stage, Commit and Push any changes
-        subprocess.Popen(["git", "commit", "BF2specs/"])
-        subprocess.Popen(["git", "push", "origin", "master"])
+        index.add(['BF2specs'])
+        message = 'BF2 spec changes of: ' + str(date)
+        index.commit(message)
 
 
 if __name__ == '__main__':
