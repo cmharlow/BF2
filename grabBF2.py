@@ -25,6 +25,7 @@ def diffDate(oldBF, newBF):
     if not oldBFdate:
         for obj in oldBF.objects((None, DCTERMS.modified)):
             oldBFdate = obj.toPython()
+            print(oldBFdate)
     else:
         oldBFdate = oldBF.toPython()
     newBFdate = newBF.value(rdflib.URIRef(bfURI), DCTERMS.modified).toPython()
@@ -53,7 +54,9 @@ def main():
         # Stage, Commit and Push any changes
         index.add(['BF2specs'])
         message = 'BF2 spec changes of: ' + str(date)
+        print(message)
         index.commit(message)
+        o.push()
 
 
 if __name__ == '__main__':
