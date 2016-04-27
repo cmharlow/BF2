@@ -1,0 +1,2507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/musicSerialNumber">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Music serial number</rdfs:label>
+    <skos:definition>Numeric designation for musical works consecutively numbered in music reference sources.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Jurisdiction">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <rdfs:label>Jurisdiction</rdfs:label>
+    <skos:definition>Legal or political unit administering a geographic area.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/DissertationIdentifier">
+    <skos:definition>Identifier assigned to a thesis or dissertation for identification purposes .</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>Dissertation Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/accompaniedBy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Accompanied by</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdfs:comment>Expected value Work, Instance or Item</rdfs:comment>
+    <skos:definition>Resource that accompanies the described resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Contribution">
+    <skos:definition>Agent and role with respect to the resource being described.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Contribution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/generation">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Generation"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Relationship between an original carrier and the carrier of a reproduction made from the original.</skos:definition>
+    <rdfs:label>Generation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MusicNotation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
+    <rdfs:label>Music notation used</rdfs:label>
+    <skos:definition>Information on the symbol system used to convey the content of a music resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/electronicLocator">
+    <skos:definition>Electronic location from which the resource is available.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Electronic location</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/voiceType">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/MusicVoice"/>
+    <skos:definition>Specific type of voice group, such as chorus, solo.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Type of voice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Text">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Text</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Resource intended to be perceived visually and understood through the use of language in written or spoken form.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Classification">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Classification entity</rdfs:label>
+    <skos:definition>System of coding and organizing materials according to their subject.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Issuance">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Mode of issuance</rdfs:label>
+    <skos:definition>Information about whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/splitInto">
+    <skos:definition>One of two or more resources resulting from the division of an earlier resource into separate resources.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/succeededBy"/>
+    <rdfs:label>Split into</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/notation">
+    <rdfs:label>Notation system</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/place">
+    <skos:definition>Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Place</rdfs:label>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/mainTitle">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Main title</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    <skos:definition>Title being addressed. Possible title component.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MixedMaterial">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Mixed material</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Resource comprised of multiple types which are not driven by software. This may include materials in two or more forms that are related by virtue of their having been accumulated by or about a person or body., archival fonds.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Layout">
+    <rdfs:label>Layout</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Arrangement of text, images, tactile notation, etc., in a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Chronology">
+    <rdfs:label>Chronology</rdfs:label>
+    <skos:definition>Dates associated with issues or items held.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/EnumerationAndChronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Doi">
+    <rdfs:label>DOI</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Digital Object Identifier.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/note">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>General textual information relating to a resource, such as Information about a specific copy of a resource or information about a particular attribute of a resource.</skos:definition>
+    <rdfs:label>Note</rdfs:label>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Publication">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ProvisionActivity"/>
+    <skos:definition>Information relating to publication of a resource.</skos:definition>
+    <rdfs:label>Publisher</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/subLocation">
+    <skos:definition>Specific place within the holding entity where the item is located or made available.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Sublocation"/>
+    <rdfs:label>Held in sublocation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Event">
+    <skos:definition>Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is documented by a resource.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Event entity</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ClassificationLcc">
+    <skos:definition>Library of Congress Classification number used for subject access.</skos:definition>
+    <rdfs:label>LCC Classification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/issuedWith">
+    <skos:definition>Resource that is issued on the same carrier as the resource being described.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/accompanies"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Issued with</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/firstIssue">
+    <skos:definition>Beginning date of a resource and/or the sequential designations.</skos:definition>
+    <rdfs:label>Multipart first issue</rdfs:label>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/version">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Term or terms that identify works such as arranged for music, vulgate for religious work, etc.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Version</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/emulsion">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Emulsion"/>
+    <rdfs:label>Emulsion</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/heldBy">
+    <rdfs:label>Held by</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Entity holding the item or from which it is available.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Production">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ProvisionActivity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Information relating to production of a resource.</skos:definition>
+    <rdfs:label>Producer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/absorbedBy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Absorbed by</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource that incorporates another resource.</skos:definition>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/succeededBy"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/edition">
+    <rdfs:label>Classification scheme edition</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/continues">
+    <rdfs:label>Continuation of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Resource that is continued by the content of a later resource under a new title.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/precededBy"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Generation">
+    <skos:definition>Relationship between an original carrier and the carrier of a reproduction made from the original.</skos:definition>
+    <rdfs:label>Generation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/musicKey">
+    <rdfs:label>Music key</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Pitch and mode for music.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/physicalLocation">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <rdfs:label>Storing or shelving location</rdfs:label>
+    <skos:definition>Location in the holding agency where the item is shelved or stored.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Frequency">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Information about intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued.</skos:definition>
+    <rdfs:label>Frequency</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasInstance">
+    <skos:definition>Instance is related to described Work. For use to connect Works to Instances in the BIBFRAME structure.</skos:definition>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Instance of Work</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/replacedBy">
+    <skos:definition>Later resource used in place of an earlier resource, usually because the later resource contains updated or new information.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/succeededBy"/>
+    <rdfs:label>Succeeded by</rdfs:label>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/PostalRegistration">
+    <skos:definition>Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>Postal registration number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/geographicCoverage">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Geographic coverage of the content of the resource.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Geographic coverage</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/EnumerationAndChronology">
+    <rdfs:label>Enumeration and chronology</rdfs:label>
+    <skos:definition>Numbering or other enumeration and dates associated with issues or items held.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ClassificationNlm">
+    <skos:definition>National Library of Medicine Classification number used for subject access</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <rdfs:label>NLM classification</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/mergerOf">
+    <rdfs:label>Merger of</rdfs:label>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>One of two or more resources which came together to form a new resource.</skos:definition>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/precededBy"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/TableOfContents">
+    <rdfs:label>Table of contents</rdfs:label>
+    <skos:definition>Table of contents of a resource.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/KeyTitle">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</skos:definition>
+    <rdfs:label>Key title</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/dissertation">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Dissertation Information</rdfs:label>
+    <skos:definition>Work presented as part of the formal requirements for an academic degree.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Dissertation"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/NotatedMovement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Graphic, non-realized representations of movement intended to be perceived visually, e.g. dance.</skos:definition>
+    <rdfs:label>Notated movement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/BookFormat">
+    <rdfs:label>Book format</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Result of folding a printed sheet to form a gathering of leaves.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/digitalCharacteristic">
+    <rdfs:label>Digital characteristic</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+    <skos:definition>Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Collection">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Aggregation of resources, generally gathered together artificially.</skos:definition>
+    <rdfs:label>Collection</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Item">
+    <skos:definition>Single example of an Instance.</skos:definition>
+    <rdfs:label>Item</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/noteType">
+    <rdfs:label>Note type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Type of note.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/acquisitionSource">
+    <rdfs:label>Source of acquisition</rdfs:label>
+    <skos:definition>Information about an organization, etc., from which a resource may be obtained.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Identifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Token or name that is associated with a resource, such as a URI or an ISBN.</skos:definition>
+    <rdfs:label>Identifier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Manuscript">
+    <rdfs:label>Manuscript</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Resource that is written in handwriting or typescript. These are generally unique resources.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/table">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Classification table identification</rdfs:label>
+    <skos:definition>Number of the table from which the classification number in a subdivision entry is taken, e.g., a DDC table.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Cartographic">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Cartographic information</rdfs:label>
+    <skos:definition>Content that represents the whole or part of the earth, any celestial body, or imaginary place at any scale.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/equinox">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Cartographic"/>
+    <skos:definition>One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees.</skos:definition>
+    <rdfs:label>Cartographic equinox</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Distribution">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ProvisionActivity"/>
+    <rdfs:label>Distributor</rdfs:label>
+    <skos:definition>Information relating to distribution of a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/PublisherNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Number assigned by a publisher that is not one of the specific defined types.</skos:definition>
+    <rdfs:label>Other publisher number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/usageAndAccessPolicy">
+    <skos:definition>General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.</skos:definition>
+    <rdfs:label>Use and access condition</rdfs:label>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/UsageAndAccessPolicy"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/media">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Media type</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Media"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/awards">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Award note</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Information on awards associated with the described resource.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/part">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdfs:label>Part</rdfs:label>
+    <skos:definition>Part of a resource to which information applies.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/lastIssue">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Ending date of a resource and/or the sequential designations.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Multipart last issue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Agent">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Entity having a role in a resource, such as a person or organization.</skos:definition>
+    <rdfs:label>Agent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Manufacture">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ProvisionActivity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Information relating to manufacture of a resource.</skos:definition>
+    <rdfs:label>Manufacturer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/originPlace">
+    <skos:definition>Place from which the creation of the Work originated.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Place"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/place"/>
+    <rdfs:label>Associated title place</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/outerGRing">
+    <rdfs:label>Cartographic outer G ring area covered</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Coordinate pairs that identify the closed non-intersecting boundary of the area covered.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Cartographic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/changeDate">
+    <rdfs:label>Description change date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/date"/>
+    <skos:definition>Date or date and time on which the metadata was modified.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/TrackConfig">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Track configuration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+    <skos:definition>Configuration of the audio track on a sound-track film, e.g., center track, edge track.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Strn">
+    <skos:definition>Standard Technical Report Number.</skos:definition>
+    <rdfs:label>STRN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/issuance">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Issuance"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Mode of issuance</rdfs:label>
+    <skos:definition>Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/grantingInstitution">
+    <rdfs:label>Degree issuing institution</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Dissertation"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Name of degree granting institution.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/supplementTo">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Supplement to</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/accompanies"/>
+    <skos:definition>Resource that is updated or otherwise complemented by the augmenting resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Organization">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Organization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <skos:definition>Corporation or group of persons and/or organizations that acts, or may act, as a unit.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/barcode">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Barcode"/>
+    <rdfs:label>Barcode</rdfs:label>
+    <skos:definition>Optical machine-readable representation of data relating to the item, to which it is attached.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/PresentationFormat">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ProjectionCharacteristic"/>
+    <rdfs:label>Presentation format</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Format used in the production of a projected image, e.g., Cinerama, IMAX.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/enumerationAndChronology">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/EnumerationAndChronology"/>
+    <skos:definition>Numbering and dates of issues or items held.</skos:definition>
+    <rdfs:label>Numbering or other enumeration and dates associated with issues or items held.</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/reproductionOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Reproduction of</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/hasEquivalent"/>
+    <skos:definition>Resource that is a reproduction of another Resource.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/originalVersion">
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/derivativeOf"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource is the original version of which this resource is a reproduction.</skos:definition>
+    <rdfs:label>Original version</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/organization">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Organization of material</rdfs:label>
+    <skos:definition>Manner in which the resource is divided into smaller units.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Arrangement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/EncodedBitrate">
+    <rdfs:label>Encoded bitrate</rdfs:label>
+    <skos:definition>Speed at which streaming audio, video, etc., is designed to play, e.g., 32 kbps.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <skos:definition>Resource that is included either physically or logically in the described resource</skos:definition>
+    <rdfs:label>Has part</rdfs:label>
+    <rdfs:comment>Expected value Work, Instance or Item</rdfs:comment>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Hdl">
+    <skos:definition>Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>Handle</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Coden">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>CODEN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/bookFormat">
+    <rdfs:label>Book format</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Result of folding a printed sheet to form a gathering of leaves.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/BookFormat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Object">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Resource in a form intended to be perceived visually in three-dimensions. Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Three-dimensional object</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/spanEnd">
+    <rdfs:label>Classification number span end</rdfs:label>
+    <skos:definition>Ending number of classification number span.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Isbn">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>ISBN</rdfs:label>
+    <skos:definition>International Standard Book Number.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/adminMetadata">
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <skos:definition>Metadata about the metadata, especially provenance information.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+    <rdfs:label>Administrative metadata</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle">
+    <rdfs:label>Abbreviated title</rdfs:label>
+    <skos:definition>Title as abbreviated for citation, indexing, and/or identification.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/mergedToForm">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Merged to form</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/succeededBy"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>One of two or more resources that come together to form a new resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/UsePolicy">
+    <rdfs:label>Use policy</rdfs:label>
+    <skos:definition>Usage limitations placed on a resource with respect to reproduction, publication, exhibition, etc..</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/UsageAndAccessPolicy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/absorbed">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Resource that has been incorporated into another resource.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Absorption of</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/precededBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/cartographicAttributes">
+    <skos:definition>Cartographic data that identifies characteristics of the resource, such as coordinates, projection, etc.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Cartographic"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Cartographic data</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/GenreForm">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Characteristics of works with similar plots, themes, settings, etc. (e.g., westerns, thrillers), or with a particular format of purpose (e.g., animation, short), or a combination (e.g., horror film where horror is the genre and film is the form).</skos:definition>
+    <rdfs:label>Genre/form</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/reductionRatio">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Reduction ratio</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/ReductionRatio"/>
+    <skos:definition>Size of a micro-image in relation to the original from which it was produced.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/copyrightDate">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/date"/>
+    <skos:definition>Date associated with a claim of protection under copyright or a similar regime.</skos:definition>
+    <rdfs:label>Copyright date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/expressionOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Work that the described Work is an expression of. For use to connect Works under FRBR/RDA rules.</skos:definition>
+    <rdfs:label>Expression of</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/baseMaterial">
+    <skos:definition>Underlying physical material of a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/BaseMaterial"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Base material</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/RetentionPolicy">
+    <skos:definition>Policy of holding institution for retaining resource.</skos:definition>
+    <rdfs:label>Retention policy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/UsageAndAccessPolicy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ReportNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Technical report number</rdfs:label>
+    <skos:definition>Identification number of a technical report that is not a Standard Technical Report Number.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/mount">
+    <rdfs:label>Mount material</rdfs:label>
+    <skos:definition>Physical material used for the support or backing to which the base material of a resource has been attached.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Mount"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/referencedBy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdfs:comment>Expected value Work, Instance or Item</rdfs:comment>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <skos:definition>Resource that references the described resource</skos:definition>
+    <rdfs:label>Referenced by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ProjectionSpeed">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ProjectionCharacteristic"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Projection speed</rdfs:label>
+    <skos:definition>Speed at which a projected carrier must be operated to produce the moving image intended, e.g., 20 fps.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/StockNumber">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Identification number used for stock purposes and assigned by agencies such as distributors, publishers, or vendors.</skos:definition>
+    <rdfs:label>Stock number</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/dataSource">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <skos:definition>Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures.</skos:definition>
+    <rdfs:label>Data source</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/coordinates">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Cartographic"/>
+    <skos:definition>Mathematical system for identifying the area covered by the cartographic content of a resource, expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Cartographic coordinates</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/NotatedMusic">
+    <skos:definition>Graphic, non-realized representations of musical works intended to be perceived visually.</skos:definition>
+    <rdfs:label>Notated music</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/colorContent">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/ColorContent"/>
+    <skos:definition>Color characteristics, e.g., black and white, multicolored.</skos:definition>
+    <rdfs:label>Color content</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/contentAccessibility">
+    <skos:definition>Information that assists those with a sensory impairment for greater understanding of content, e.g., captions.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Content accessibility note</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/precededBy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Preceded by</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <skos:definition>Resource that precedes the resource being described, e.g., is earlier in time or before in narrative.</skos:definition>
+    <rdfs:comment>Expected value Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/eventContent">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+    <skos:definition>Work whose content is the described event.</skos:definition>
+    <rdfs:label>Event content</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/instrument">
+    <skos:definition>Instrument for which a musical Work is appropriate.</skos:definition>
+    <rdfs:label>Instrument</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/MusicInstrument"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/partName">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    <rdfs:label>Part title</rdfs:label>
+    <skos:definition>Part or section name of a title. Possible title component.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/VideorecordingNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Videorecording number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Number assigned by a publisher to a videorecording.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/review">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Review"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Review content</rdfs:label>
+    <skos:definition>Review of a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/descriptionConventions">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/DescriptionConventions"/>
+    <rdfs:label>Description conventions</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Rules used for the descriptive content of the resource description.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/supplement">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Supplement</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/accompaniedBy"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>Resource that updates or otherwise complements the predominant resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Sound characteristic</rdfs:label>
+    <skos:definition>Technical specification relating to the encoding of sound in a resource.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/historyOfWork">
+    <skos:definition>Information about the history of a Work.</skos:definition>
+    <rdfs:label>History of the work</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasEquivalent">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Expected value Work, Instance or Item</rdfs:comment>
+    <rdfs:label>Equivalence</rdfs:label>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <skos:definition>Resource embodies the same content as the described resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/seriesOf">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource that is a part of a larger resource.</skos:definition>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/hasPart"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Series container of</rdfs:label>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/translationOf">
+    <skos:definition>Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Translation of</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/hasDerivative"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/duration">
+    <skos:definition>Information about the playing time, running time, etc. of a resource.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Duration</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/frequency">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Frequency</rdfs:label>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Frequency"/>
+    <skos:definition>Intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/provisionActivity">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Provider</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/ProvisionActivity"/>
+    <skos:definition>Place, name, and/or date information relating to the publication, printing, distribution, issue, release, or production of a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Dissertation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Dissertation information</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Information about a work presented as part of the formal requirements for an academic degree.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasReproduction">
+    <skos:definition>Resource that reproduces another Resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/hasEquivalent"/>
+    <rdfs:label>Reproduced as</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Extent">
+    <skos:definition>Number and type of units and/or subunits making up a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Extent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Local">
+    <rdfs:label>Local identifier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Identifier established locally and not a standard number.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Resolution">
+    <rdfs:label>Resolution</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Clarity or fineness of detail in a digital image, expressed by the measurement of the image in pixels, etc., e.g., 3.1 megapixels.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/">
+    <owl:imports rdf:resource="http://id.loc.gov/vocabulary/relators"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>BIBFRAME vocabulary</rdfs:label>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Initially automatically generated.</owl:versionInfo>
+    <dcterms:modified>2016-04-26T11:19:56.52-04:00</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/findingAid">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/accompaniedBy"/>
+    <skos:definition>Relationship for archival, visual, and manuscript resources to a finding aid or similar control materials.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Finding aid</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Note">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Information, usually in textual form, on attributes of a resource or some aspect of a resource.</skos:definition>
+    <rdfs:label>Note</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Tactile">
+    <skos:definition>Resource that is intended to be perceived by touch.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Tactile material</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Carrier">
+    <rdfs:label>Carrier type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Categorization reflecting the format of the storage medium and housing of a carrier.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ensembleType">
+    <rdfs:label>Ensemble type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Specific type of ensemble, such as orchestra, band, guitar ensemble.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/MusicEnsemble"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Ismn">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>International Standard Music Number.</skos:definition>
+    <rdfs:label>ISMN</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/language">
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdfs:label>Language information</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Language"/>
+    <skos:definition>Language associated with a resource or its parts.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/scale">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Scale</rdfs:label>
+    <skos:definition>Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/custodialHistory">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Custodial history</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Audio">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Resources expressed in an audible form, including music or other sounds.</skos:definition>
+    <rdfs:label>Audio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/relatedTo">
+    <rdfs:label>Related resource</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Any relationship between Work, Instance, and Item resources.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MovementNotation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Information on the symbol system used to convey the content of a movement resource.</skos:definition>
+    <rdfs:label>Movement notation used</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/soundContent">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundContent"/>
+    <rdfs:label>Sound content</rdfs:label>
+    <skos:definition>Indication of whether the production of sound is an integral part of the resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/CartographicObjectType">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+    <rdfs:label>Digital cartographic object type</rdfs:label>
+    <skos:definition>Object type for encoding of geospatial information in a cartographic resource, e.g., point, line, polygon.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/subseriesOf">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Subseries of</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/hasPart"/>
+    <skos:definition>Series resource of which the described resource is a part.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/shelfMark">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMark"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <skos:definition>Piece identifier, such as a call or other type of number.</skos:definition>
+    <rdfs:label>Shelf mark</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Topic">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Topic</rdfs:label>
+    <skos:definition>Concept or area of knowledge.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/projection">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Cartographic"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Method or system used to represent the surface of the earth or of a celestial sphere on a plane.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Cartographic projection</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/references">
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdfs:label>References</rdfs:label>
+    <rdfs:comment>Expected value Work, Instance or Item</rdfs:comment>
+    <skos:definition>Resource that is referenced by the described resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasSeries">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>Resource in which the part has been issued; the title of the larger resource appears on the part.</skos:definition>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/partOf"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>In series</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/degree">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Dissertation"/>
+    <rdfs:label>Degree</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Degree for which author was a candidate.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/StillImage">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Still image</rdfs:label>
+    <skos:definition>Resource expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions. Includes two-dimensional images and slides and transparencies.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Sici">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>SICI</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Serial Item and Contribution Identifier.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/musicOpusNumber">
+    <skos:definition>Numeric designation of a musical work assigned by a composer, publisher, or a musicologist.</skos:definition>
+    <rdfs:label>Music opus number</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/dimensions">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Measurements of the carrier or carriers and/or the container of a resource.</skos:definition>
+    <rdfs:label>Dimensions</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/subject">
+    <skos:definition>Subject term(s) describing a resource.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Subject</rdfs:label>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/classificationPortion">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Classification number (single class number or beginning number of a span) that indicates the subject by applying a formal system of coding and organizing resources.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Classification number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hierarchicalLevel">
+    <skos:definition>Hierarchical position of the described materials relative to other material from the same source.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Arrangement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Hierarchical level of material</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/partNumber">
+    <rdfs:label>Part number</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Part or section enumeration of a title. Possible title component.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/derivativeOf">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Expected value Work or Instance</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdfs:label>Is derivative of</rdfs:label>
+    <skos:definition>Source work from which the described resource is derived.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ProductionMethod">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Process used to produce a resource</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Production method</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ascensionAndDeclination">
+    <skos:definition>System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Cartographic ascension and declination</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Cartographic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/genreForm">
+    <rdfs:label>Genre/form</rdfs:label>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/GenreForm"/>
+    <skos:definition>Form category or genre to which a resource belongs</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Dataset">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Data encoded in a defined structure. Includes numeric data, environmental data, etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form.</skos:definition>
+    <rdfs:label>Dataset</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/code">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>String of characters that serves as a code representing information.</skos:definition>
+    <rdfs:label>Code</rdfs:label>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/IssnL">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>International Standard Serial Number that links together various media versions of a continuing resource.</skos:definition>
+    <rdfs:label>ISSN-L</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Review">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Review of a resource.</skos:definition>
+    <rdfs:label>Review</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/itemPortion">
+    <skos:definition>Number attached to a classification string that indicates a particular item.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <rdfs:label>Classification item number</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/descriptionLanguage">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Description language</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Language"/>
+    <skos:definition>Language used for the metadata.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/replacementOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Preceded by</rdfs:label>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information.</skos:definition>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/precededBy"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/projectionChracteristic">
+    <skos:definition>Technical specification relating to the projection of a motion picture film.</skos:definition>
+    <rdfs:label>Projection characteristic</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/ProjectionCharacteristic"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/DescriptionConventions">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+    <rdfs:label>Description conventions</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Rules used for the descriptive content of the resource description.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ClassificationDdc">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <skos:definition>Dewey Decimal Classification number used for subject access.</skos:definition>
+    <rdfs:label>DDC Classification</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/VideoCharacteristic">
+    <skos:definition>Technical specification relating to the encoding of video images in a resource.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Video characteristic</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/schedulePart">
+    <skos:definition>Designates whether the classification number is from the standard or optional part of a schedule or table.</skos:definition>
+    <rdfs:label>Classification designation</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/itemOf">
+    <skos:definition>Instance that is an example of the described Item.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <rdfs:label>Holding for</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/StudyNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Identification number for a computer data file.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>Study number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Media">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.</skos:definition>
+    <rdfs:label>Media type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/immediateAcquisition">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <skos:definition>Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired.</skos:definition>
+    <rdfs:label>Immediate acquisition</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Sublocation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Specific place within the holding entity where the item is located or made available.</skos:definition>
+    <rdfs:label>Sublocation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Place">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Geographic location.</skos:definition>
+    <rdfs:label>Place</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/classification">
+    <rdfs:label>Classification</rdfs:label>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <skos:definition>Classification number in any scheme.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Mount">
+    <rdfs:label>Mount</rdfs:label>
+    <skos:definition>Physical material used for the support or backing to which the base material of a resource has been attached.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/productionMethod">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/ProductionMethod"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Production method</rdfs:label>
+    <skos:definition>Process used to produce a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Family">
+    <skos:definition>Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family.</skos:definition>
+    <rdfs:label>Family</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ShelfMarkNlm">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Shelf mark based on National Library of Medicine Classification.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMark"/>
+    <rdfs:label>NLM call number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/BroadcastStandard">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VideoCharacteristic"/>
+    <skos:definition>System used to format a video resource for television broadcast, e.g., HDTV, PAL.</skos:definition>
+    <rdfs:label>Broadcast standard</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/editionEnumeration">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Enumeration of the edition; usually transcribed.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Edition enumeration</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/seriesEnumeration">
+    <skos:definition>Series enumeration of the resource; usually transcribed.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Series enumeration</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/TapeConfig">
+    <skos:definition>Number of tracks on an audiotape, e.g., 12 track.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+    <rdfs:label>Tape configuration</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/subtitle">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Subtitle</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    <skos:definition>Word, character, or group of words and/or characters that contains the remainder of the title after the main title. Possible title component.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/separatedFrom">
+    <skos:definition>Resource that spun off a part of its content to form a new resource.</skos:definition>
+    <rdfs:label>Separated from</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/precededBy"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/musicThematicNumber">
+    <skos:definition>Numeric designation for a musical work as found in a thematic index for the composer.</skos:definition>
+    <rdfs:label>Music thematic number</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/CollectiveTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+    <skos:definition>Title for a compilation of resources.</skos:definition>
+    <rdfs:label>Collective title</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ProvisionActivity">
+    <rdfs:label>Provider entity</rdfs:label>
+    <skos:definition>Information about the agent or place relating to the publication, printing, distribution, issue, release, or production of a resource.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/count">
+    <skos:definition>Number associated with a measure of units, such as the number of units and/or subunits making up a resource.</skos:definition>
+    <rdfs:label>Number of units</rdfs:label>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MusicPlate">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Number assigned by a music publisher to a specific music publication.</skos:definition>
+    <rdfs:label>Music plate number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Script">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Script used</rdfs:label>
+    <skos:definition>Information on the script, or symbol system used to convey the content of a text resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/contribution">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Contribution"/>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Contributor role</rdfs:label>
+    <skos:definition>Agent and its role in relation to the resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Person">
+    <skos:definition>Individual or identity established by an individual (either alone or in collaboration with one or more other individuals).</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <rdfs:label>Person</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Status">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Status</rdfs:label>
+    <skos:definition>Designation of the validity or position of something, e.g., whether something is incorrect or available.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Emulsion">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Emulsion</rdfs:label>
+    <skos:definition>Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Iso">
+    <rdfs:label>ISO number</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>International Organization for Standardization standard number.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/legalDate">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Date of legal work, or promulgation of a law, or signing of a treaty.</skos:definition>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/date"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Date of legal work</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/tableOfContents">
+    <rdfs:label>Table of contents content</rdfs:label>
+    <skos:definition>Table of contents of the described resource.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/TableOfContents"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/partOf">
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <skos:definition>Resource in which the described resource is physically or logically contained.</skos:definition>
+    <rdfs:label>Is part of</rdfs:label>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Expected value Work, Instance or Item</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/systemRequirements">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Equipment or system requirements beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc.</skos:definition>
+    <rdfs:label>Equipment or system requirements</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/PlaybackCharacteristic">
+    <rdfs:label>Special playback characteristics</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+    <skos:definition>Equalization system, noise reduction system, etc., used in making an audio recording, e.g., CCIR standard, CX encoded, Dolby.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/WorkTitle">
+    <skos:definition>Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    <rdfs:label>Work title</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Enumeration">
+    <rdfs:label>Enumeration</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Numbering or other enumeration associated with issues or items held.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/EnumerationAndChronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/arrangement">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Arrangement"/>
+    <rdfs:label>Organization and arrangement</rdfs:label>
+    <skos:definition>Information about the organization and arrangement of a collection of resources.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/source">
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdfs:label>Source</rdfs:label>
+    <skos:definition>Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Source"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ensemble">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/MusicEnsemble"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Ensemble</rdfs:label>
+    <skos:definition>Ensemble for which a musical work is appropriate.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/illustrativeContent">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>Information about content intended to illustrate a resource.</skos:definition>
+    <rdfs:label>Illustrative content information</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Illustration"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Summary">
+    <skos:definition>Description of the content of a resource, such as an abstract, summary, etc..</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Summary</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/derivedFrom">
+    <skos:definition>Link to the metadata that was the source of the data.</skos:definition>
+    <rdfs:label>Source metadata</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MusicEnsemble">
+    <skos:definition>Ensemble for which a musical work is appropriate.</skos:definition>
+    <rdfs:label>Music ensemble</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/FontSize">
+    <skos:definition>Size of the type used to represent the characters and symbols in a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Font size</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/carrier">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Carrier"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Categorization reflecting the format of the storage medium and housing of a carrier.</skos:definition>
+    <rdfs:label>Carrier type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ParallelTitle">
+    <rdfs:label>Parallel title proper</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Title in another language and/or script.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Lccn">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>LCCN</rdfs:label>
+    <skos:definition>Library of Congress Control Number that identifies a resource description.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasExpression">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdfs:label>Expressed as</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/AspectRatio">
+    <rdfs:label>Aspect ratio</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Proportional relationship between an image's width and its height.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Polarity">
+    <skos:definition>Relationship of the colors and tones in an image to the colors and tones of the object reproduced.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Polarity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/provisionActivityStatement">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Statement relating to providers of a resource; usually transcribed.</skos:definition>
+    <rdfs:label>Provider statement</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/translation">
+    <rdfs:label>Translation as</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource that translates the text of the source entity into a language different from that of the original.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/derivativeOf"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/PlaybackChannels">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Configuration of playback channels</rdfs:label>
+    <skos:definition>Configuration/number of sound channels used to make a recording, such as one channel for a monophonic recording, e.g., mono, stereo, quadraphonic, surround.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/otherPhysicalFormat">
+    <skos:definition>Resource that is manifested in another physical carrier.</skos:definition>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/hasEquivalent"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Has other physical format</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/UsageAndAccessPolicy">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Use and access conditions</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Title">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Title Entity</rdfs:label>
+    <skos:definition>Title information relating to a resource: mail title, translated title, or variant form of title.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/videoCharacteristic">
+    <rdfs:label>Video characteristic</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/VideoCharacteristic"/>
+    <skos:definition>Technical specification relating to the encoding of video images in a resource</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/extent">
+    <rdfs:label>Extent</rdfs:label>
+    <skos:definition>Number and type of units and/or subunits making up a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Extent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/findingAidOf">
+    <rdfs:label>Finding aid for</rdfs:label>
+    <skos:definition>Finding aid or similar control materials for archival, visual, and manuscript resources.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/accompanies"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/qualifier">
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <skos:definition>Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier.</skos:definition>
+    <rdfs:label>Qualifier</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Unit">
+    <skos:definition>Units in which a value is expressed.</skos:definition>
+    <rdfs:label>Unit</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Istc">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>ISTC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>International Standard Text Code, a numbering system developed to enable the unique identification of textual works.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/otherEditionOf">
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/hasDerivative"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Other edition of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Resource is an edition of another resource.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/PlayingSpeed">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+    <rdfs:label>Playing speed</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/identifiedBy">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <skos:definition>Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.</skos:definition>
+    <rdfs:label>Identifier</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/agent">
+    <skos:definition>Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Associated agent</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/unit">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Unit"/>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdfs:label>Type of unit</rdfs:label>
+    <skos:definition>Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/VariantTitle">
+    <rdfs:label>Title variation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    <skos:definition>Title associated with the resource that is different from the Work or Instance title.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasDerivative">
+    <rdfs:comment>Expected value Work or Instance</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Has derivative</rdfs:label>
+    <skos:definition>Resource that is a modification of the described work.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MusicMedium">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Music medium information</rdfs:label>
+    <skos:definition>Summary statement of the medium for a musical work.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/GrooveCharacteristics">
+    <skos:definition>Groove width of an analog disc or the groove pitch of an analog cylinder, e.g., course groove, microgroove</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+    <rdfs:label>Groove characteristics</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/creationDate">
+    <skos:definition>Date or date and time on which the original metadata first created.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Description creation date</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/date"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/index">
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/accompaniedBy"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Index</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource has an accompanying index</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/IntendedAudience">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Intended audience information</rdfs:label>
+    <skos:definition>Information that identifies the specific intended or target audience or intellectual level for which the content described is considered appropriate. Also used to record interest and motivation levels and special learner characteristics.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasSubseries">
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/partOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Subseries</rdfs:label>
+    <skos:definition>series resource that is part of another series.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/SupplementaryContent">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Index, bibliography, appendix, etc. intended to supplement the primary content of a resource.</skos:definition>
+    <rdfs:label>Supplementary material</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/status">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdfs:label>Status</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ShelfMark">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>Shelf location</rdfs:label>
+    <skos:definition>Piece/item identifier, such as a call or other type of number.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/CartographicDataType">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Data type for encoding of geospatial information in a cartographic resource, e.g., raster, vector, point.</skos:definition>
+    <rdfs:label>Digital cartographic data type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Upc">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Universal Product Code.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>UPC</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Ean">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>EAN</rdfs:label>
+    <skos:definition>International Article Identifier.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/capture">
+    <skos:definition>Information about place and date associated with the capture (e.g., recording, filming) of the content of a resource.</skos:definition>
+    <rdfs:label>Capture of content</rdfs:label>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Capture"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/continuesInPart">
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/precededBy"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Continuation in part of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>Resource that split into two or more separate resources with new titles.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Temporal">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Temporal concept</rdfs:label>
+    <skos:definition>Chronological period.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/natureOfContent">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Content nature</rdfs:label>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/IssueNumber">
+    <skos:definition>Number used to identify the issue designation, or serial identification, assigned by a publisher to a sound recording.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Audio issue number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Barcode">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Barcode</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Optical machine-readable representation of data relating to the item to which it is attached.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/assigner">
+    <skos:definition>Entity that assigned the metadata, such as the entity that assigned a classification number, entity that assigned a name, entity that assigned an identifier.</skos:definition>
+    <rdfs:label>Assigner</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/responsibilityStatement">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Statement relating to any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource; usually transcribed.</skos:definition>
+    <rdfs:label>Creative responsibility statement</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/instanceOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Instance of</rdfs:label>
+    <skos:definition>Work the Instance described instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/acquisitionTerms">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Terms of acquisition</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ShelfMarkDdc">
+    <skos:definition>Shelf mark based on Dewey Decimal Classification.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMark"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>DDC call number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Content">
+    <rdfs:label>Content type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/fontSize">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/FontSize"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Font size</rdfs:label>
+    <skos:definition>Size of the type used to represent the characters and symbols in a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/originalVersionOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Original version of</rdfs:label>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/hasDerivative"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Original version of a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/exclusionGRing">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Coordinate pairs that identify the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Cartographic"/>
+    <rdfs:label>Cartographic G ring area excluded</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/indexOf">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Index that accompanies a resource.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Index to</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/accompanies"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/voice">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Voice</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/MusicVoice"/>
+    <skos:definition>Voice for which a musical work is appropriate, such as soprano, tenor, mixed.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Issn">
+    <rdfs:label>ISSN</rdfs:label>
+    <skos:definition>International Standard Serial Number.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/contributor">
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdfs:label>Contributor</rdfs:label>
+    <skos:definition>Generalized relationship role when no specific role can be given.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/GenerationProcess">
+    <skos:definition>Indication of the program or process used to generate the description by application of a particular transformation.</skos:definition>
+    <rdfs:label>Generation process</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/aspectRatio">
+    <rdfs:label>Aspect ratio</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/AspectRatio"/>
+    <skos:definition>Proportional relationship between an image's width and its height.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Nbn">
+    <rdfs:label>NBN</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>National Bibliography Number that identifies a resource description.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/tableSeq">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Classification table sequence number</rdfs:label>
+    <skos:definition>Sequence number or other identifier for an internal classification sub arrangement or add in a classification scheme.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/generationDate">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Date of conversion of the metadata from another format.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/date"/>
+    <rdfs:label>Date generated</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Multimedia">
+    <skos:definition>Electronic resource that is a computer program (i.e., digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven, such as videogames.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Software or multimedia</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/InstanceTitle">
+    <rdfs:label>Instance title</rdfs:label>
+    <skos:definition>Title chosen as the name of an Instance, sometimes called "title proper" and often transcribed from the instance.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/credits">
+    <rdfs:label>Credits note</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Language">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Language entity</rdfs:label>
+    <skos:definition>Language entity.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/date">
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <skos:definition>Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Date</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/AdminMetadata">
+    <skos:definition>Metadata about the metadata, especially provenance information.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Administrative metadata</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/TactileNotation">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
+    <rdfs:label>Tactile notation used</rdfs:label>
+    <skos:definition>Information on the symbol system used to convey the content of a tactile resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/AppliedMaterial">
+    <skos:definition>Physical or chemical substance applied to a base material of a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Applied material</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Urn">
+    <skos:definition>Uniform Resource Number.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>URN</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/descriptionModifier">
+    <skos:definition>Agency that modified a description.</skos:definition>
+    <rdfs:label>Description modifier</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/accompanies">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <rdfs:comment>Expected value Work, Instance or Item</rdfs:comment>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdfs:label>Accompanies</rdfs:label>
+    <skos:definition>Resource that adds to or is issued with the described resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/seriesStatement">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Statement of the series the resource is in; usually transcribed; includes the ISSN if applicable.</skos:definition>
+    <rdfs:label>Series statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ObjectCount">
+    <rdfs:label>Digital cartographic object count</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+    <skos:definition>Number of objects in encoded geospatial information in a cartographic resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Iswc">
+    <skos:definition>International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>ISWC</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ShelfMarkUdc">
+    <skos:definition>Shelf mark based on Universal Decimal Classification.</skos:definition>
+    <rdfs:label>UDC call number</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMark"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/title">
+    <rdfs:label>Title resource</rdfs:label>
+    <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    <skos:definition>Name given to a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/generationProcess">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+    <skos:definition>Indication of the program or process used to generate the description by application of a particular transformation.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Description generation</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/GenerationProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/appliedMaterial">
+    <rdfs:label>Applied material</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/AppliedMaterial"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Physical or chemical substance applied to a base material of a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/RegionalEncoding">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Identification of the region of the world for which a videodisc has been encoded, e.g., region 4.</skos:definition>
+    <rdfs:label>Regional encoding</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/eventContentOf">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Event that is the content of the described work.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Has event content</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic">
+    <rdfs:label>Digital characteristic</rdfs:label>
+    <skos:definition>Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/continuedInPartBy">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/succeededBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Continued in part by</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource part of whose content separated from an earlier resource to form a new resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MusicVoice">
+    <skos:definition>Voice for which a musical work is appropriate.</skos:definition>
+    <rdfs:label>Music voice</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/summary">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Summary"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Summary content</rdfs:label>
+    <skos:definition>Summary or abstract of the resource described.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Illustration">
+    <rdfs:label>Illustrative content</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Information about content intended to illustrate a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Notation">
+    <skos:definition>Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Notation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/variantType">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+    <skos:definition>Type of title variation, e.g., acronym, cover, spine, earlier, later, series version.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Variant title type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/succeededBy">
+    <rdfs:label>Succeeded by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Expected value Work or Instance</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <skos:definition>Resource that succeeds the resource being described, e.g., later in time or after in a narrative.</skos:definition>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/RecordingMethod">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+    <skos:definition>Method used to encode audio content for playback, e.g., analog, digital.</skos:definition>
+    <rdfs:label>Type of recording</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/editionStatement">
+    <skos:definition>Information identifying the edition or version of the resource and associated statements of responsibility for the edition; usually transcribed.</skos:definition>
+    <rdfs:label>Edition statement</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Capture">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Information about place and date associated with the capture (i.e., recording, filming, etc.) of the content of a resource.</skos:definition>
+    <rdfs:label>Capture of content</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/preferredCitation">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <skos:definition>Citation to the resource preferred by its custodian of the resource.</skos:definition>
+    <rdfs:label>Preferred citation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Print">
+    <skos:definition>Resource that is printed.</skos:definition>
+    <rdfs:label>Printed</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Meeting">
+    <rdfs:label>Meeting</rdfs:label>
+    <skos:definition>Gathering of individuals or representatives of various bodies for the purpose of discussing and/or acting on topics of common interest.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ProjectionCharacteristic">
+    <skos:definition>Technical specification relating to the projection of a motion picture film.</skos:definition>
+    <rdfs:label>Projection characteristic</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/subseriesStatement">
+    <rdfs:label>Subseries statement</rdfs:label>
+    <skos:definition>Statement of the subseries the resource is in; usually transcribed; includes the ISSN if applicable.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/layout">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Arrangement of text, images, tactile notation, etc., in a resource.</skos:definition>
+    <rdfs:label>Layout</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Layout"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/FileSize">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>File size</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+    <skos:definition>Number of bytes in a digital file, e.g., 162 KB.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MatrixNumber">
+    <rdfs:label>Audio matrix number</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Matrix number from the master from which a specific sound recording was pressed.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/BaseMaterial">
+    <skos:definition>Underlying physical material of a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Base material</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/coverArt">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Cover art image of a resource.</skos:definition>
+    <rdfs:label>Cover art</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/CoverArt"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/instrumentalType">
+    <skos:definition>Specific role of instrument, such as alternate, doubling, solo, ensemble.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/MusicInstrument"/>
+    <rdfs:label>Instrument role</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>LCC call number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMark"/>
+    <skos:definition>Shelf mark based on Library of Congress Classification.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ReductionRatio">
+    <skos:definition>Size of a micro-image in relation to the original from which it was produced.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Reduction ratio</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/polarity">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Polarity"/>
+    <rdfs:label>Polarity</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Relationship of the colors and tones in an image to the colors and tones of the object reproduced.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/subseriesEnumeration">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Subseries enumeration</rdfs:label>
+    <skos:definition>Subseries enumeration of the resource; usually transcribed.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MusicFormat">
+    <rdfs:label>Notated music format</rdfs:label>
+    <skos:definition>Layout for content of a resource that is presented in the form of musical notation.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Source">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Source</rdfs:label>
+    <skos:definition>Resource from which value or label came or was derived.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/originDate">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/date"/>
+    <skos:definition>Date or date range associated with the creation of a Work.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Associated title date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/role">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Agent role</rdfs:label>
+    <skos:definition>Specific role of agent.</skos:definition>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Contribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/EncodingFormat">
+    <skos:definition>Schema, standard, etc., used to encode the digital content of a resource, e.g., MP3, XML, JPEG.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Encoding format</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/CopyrightNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Copyright and Legal Deposit information</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Copyright registration</rdfs:label>
+    <rdfs:label>Copyright-legal deposit number</rdfs:label>
+    <skos:definition>Identifier assigned to a copyright registration or legal deposit.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MovingImage">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:label>Moving image</rdfs:label>
+    <skos:definition>Images intended to be perceived as moving, including motion pictures (using live action and/or animation), film avideo recordings of performances, events, etc.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/pattern">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Arrangement"/>
+    <skos:definition>Pattern of arrangement of materials within a unit.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label>Arrangement of material</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasItem">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+    <skos:definition>Item for which the described Instance is an exemplar.</skos:definition>
+    <rdfs:label>Has holding</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/temporalCoverage">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Time period coverage of the content of the resource.</skos:definition>
+    <rdfs:label>Temporal coverage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/supplementaryContent">
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Supplementary material</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/SupplementaryContent"/>
+    <skos:definition>Material such as an index, bibliography, appendix intended to supplement the primary content of a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/content">
+    <rdfs:label>Content type</rdfs:label>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Content"/>
+    <skos:definition>Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Cartography">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource that shows spatial information, including maps, atlases, globes, digital maand other cartographic resources</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Cartography</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/musicFormat">
+    <skos:definition>Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc.</skos:definition>
+    <rdfs:label>Format of notated music</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/MusicFormat"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Electronic">
+    <rdfs:label>Electronic</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Resource that is intended for manipulation by a computer, accessed either directly or remotely.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/FileType">
+    <rdfs:label>File type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic"/>
+    <skos:definition>General type of data content encoded in a computer file, e.g., text file, audiofile.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Work">
+    <rdfs:label>Work</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Resource reflecting a conceptual essence of a cataloging resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Ansi">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>ANSI number</rdfs:label>
+    <skos:definition>American National Standards Institute identifier.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Arrangement">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged.</skos:definition>
+    <rdfs:label>Organization of materials information</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/soundCharacteristc">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <rdfs:label>Sound characteristic</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacterisitc"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Technical specification relating to the encoding of sound in a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/DescriptiveAuthentication">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Indication of specific types of reviews that have been carried out on the description information.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+    <rdfs:label>Metadata authentication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ClassificationUdc">
+    <skos:definition>Universal Decimal Classification number used for subject access.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Classification"/>
+    <rdfs:label>UDC Classification</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MusicInstrument">
+    <skos:definition>Instrument for which a musical work is appropriate.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Musical instrument</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Isan">
+    <rdfs:label>ISAN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>International Standard Audiovisual Number.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Isrc">
+    <rdfs:label>ISRC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>International Standard Recording Code.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Archival">
+    <skos:definition>Resources organically created, accumulated, and/or used by a person, family, or organization in the course of conduct of affairs and preserved because of their continuing value.</skos:definition>
+    <rdfs:label>Archival controlled</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/LcOverseasAcq">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Identification number assigned by the Library of Congress to works acquired through one of its collaborative overseas acquisition programs.</skos:definition>
+    <rdfs:label>LC acquisition program</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/descriptionAuthentication">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/AdminMetadata"/>
+    <rdfs:label>Description authentication</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/DescriptionAuthentication"/>
+    <skos:definition>Indication of specific types of reviews that have been carried out on the description information.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/copyrightRegistration">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/CopyrightNumber"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <rdfs:label>Copyright and legal deposit information</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Copyright and Legal Deposit information</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/continuedBy">
+    <rdfs:label>Continued by</rdfs:label>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/succeededBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>Resource whose content continues an earlier resource under a new title.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/RecordingMedium">
+    <skos:definition>Type of medium used to record sound on an audio carrier, e.g., magnetic, optical.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+    <rdfs:label>Recording medium</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/musicMedium">
+    <rdfs:label>Music medium of performance</rdfs:label>
+    <skos:definition>Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/MusicMedium"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/CoverArt">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Cover art</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Cover illustration of a resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/otherEdition">
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/derivativeOf"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+    <skos:definition>Resource has other available editions, for example simultaneously published language editions or reprints.</skos:definition>
+    <rdfs:label>Other edition</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Instance">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Instance</rdfs:label>
+    <skos:definition>Resource reflecting an individual, material embodiment of a Work.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/VideoFormat">
+    <rdfs:label>Video format</rdfs:label>
+    <skos:definition>Standard, etc., used to encode the analog video content of a resource, e.g., Beta, 8mm.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VideoCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/Fingerprint">
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:label>Fingerprint identifier</rdfs:label>
+    <skos:definition>Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/MusicPublisherNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <skos:definition>Number assigned to a music publication other than an issue, matrix, or plate number.</skos:definition>
+    <rdfs:label>Music publisher number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/ColorContent">
+    <skos:definition>Color characteristics of a resource, e.g., black and white, multicolored, etc.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label>Color content</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/SoundContent">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Sound content</rdfs:label>
+    <skos:definition>Indication of whether the production of sound is an integral part of the resource.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/AccessPolicy">
+    <skos:definition>Access restrictions and allowances regarding access to a resource, e.g., lending policy, access restrictions, embargos.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/UsageAndAccessPolicy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>Assess policy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/intendedAudience">
+    <rdfs:label>Intended audience</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <skos:definition>Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate.</skos:definition>
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/IntendedAudience"/>
+    <rdfs:comment>Used with Work or Instance</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>
