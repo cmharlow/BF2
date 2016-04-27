@@ -1,4 +1,10 @@
+dulwich==0.9.7
+funky==0.0.2
+gittle==0.5.0
 isodate==0.5.4
+paramiko==1.10.0
+pycrypto==2.6
 pyparsing==2.1.1
 rdflib==4.2.1
-wheel==0.24.0
+six==1.10.0
+websocket-client==0.37.0
