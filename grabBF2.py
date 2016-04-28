@@ -5,6 +5,11 @@ import os
 import os
 from apscheduler.schedulers.blocking import BlockingScheduler
 
+sched = BlockingScheduler()
+@sched.scheduled_job('interval', minutes=5)
+def scheduled_job():
+    main()
+
 bf2url = 'http://id.loc.gov/ontologies/bibframe.rdf'
 bfURI = 'http://id.loc.gov/ontologies/bibframe/'
 
@@ -41,6 +46,7 @@ def diffDate(oldBF, newBF):
 def main():
     """Grab Bibframe 2 RDF spec from id.loc.gov, check for diffs."""
     # Get any changes made directly to GitHub BF2 repo first.
+    print('test run')
     o = repo.remotes.origin
     o.pull()
 
@@ -63,12 +69,5 @@ def main():
 
 
 if __name__ == '__main__':
-    """Run job hourly."""
-    scheduler = BlockingScheduler()
-    scheduler.add_job('main()', 'interval', seconds=10)
-    print('Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
-
-    try:
-        scheduler.start()
-    except (KeyboardInterrupt, SystemExit):
-        pass
+    sched.start()
+    sched.shutdown(wait=True)
