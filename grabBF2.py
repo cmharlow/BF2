@@ -1,12 +1,12 @@
 import rdflib
 from rdflib.namespace import DCTERMS
 from git import Repo
+import os
 
 bf2url = 'http://id.loc.gov/ontologies/bibframe.rdf'
 bfURI = 'http://id.loc.gov/ontologies/bibframe/'
 
 repo = Repo('/Users/Christina/Projects/BF2')
-assert not repo.bare
 config = repo.config_writer()
 config.set_value("user", "email", "cmharlow@gmail.com")
 config.set_value("user", "name", "cmh2166")
@@ -52,6 +52,7 @@ def main():
     if updates:
         writeBF2(newbf2rdf)
         # Stage, Commit and Push any changes
+        os.remove('.git/config.lock')
         index.add(['BF2specs'])
         message = 'BF2 spec changes of: ' + str(date)
         print(message)
