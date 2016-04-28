@@ -2,10 +2,13 @@ import rdflib
 from rdflib.namespace import DCTERMS
 from git import Repo
 import os
+import os
+from apscheduler.schedulers.blocking import BlockingScheduler
 
 bf2url = 'http://id.loc.gov/ontologies/bibframe.rdf'
 bfURI = 'http://id.loc.gov/ontologies/bibframe/'
 
+os.remove('.git/config.lock')
 repo = Repo('/Users/Christina/Projects/BF2')
 config = repo.config_writer()
 config.set_value("user", "email", "cmharlow@gmail.com")
@@ -36,7 +39,7 @@ def diffDate(oldBF, newBF):
 
 
 def main():
-    """Grab Bibframe 2 RDF spec from id.loc.gov hourly, check for diffs."""
+    """Grab Bibframe 2 RDF spec from id.loc.gov, check for diffs."""
     # Get any changes made directly to GitHub BF2 repo first.
     o = repo.remotes.origin
     o.pull()
@@ -52,7 +55,6 @@ def main():
     if updates:
         writeBF2(newbf2rdf)
         # Stage, Commit and Push any changes
-        os.remove('.git/config.lock')
         index.add(['BF2specs'])
         message = 'BF2 spec changes of: ' + str(date)
         print(message)
@@ -61,4 +63,12 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    """Run job hourly."""
+    scheduler = BlockingScheduler()
+    scheduler.add_job('main()', 'interval', seconds=10)
+    print('Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
+
+    try:
+        scheduler.start()
+    except (KeyboardInterrupt, SystemExit):
+        pass
