@@ -9,9 +9,9 @@
 
 bf: a owl:Ontology ;
     rdfs:label "BIBFRAME vocabulary" ;
-    dcterms:modified "2016-04-29T15:48:44.044-04:00" ;
+    dcterms:modified "2016-05-04T12:58:16.109-04:00" ;
     owl:imports <http://id.loc.gov/vocabulary/relators> ;
-    owl:versionInfo "2016-04-29T15:48:44.044-04:00"^^xsd:string .
+    owl:versionInfo "2016-05-04T12:58:16.109-04:00"^^xsd:string .
 
 bf:AbbreviatedTitle a owl:Class ;
     rdfs:label "Abbreviated title" ;
@@ -114,6 +114,12 @@ bf:CollectiveTitle a owl:Class ;
     dcterms:modified "2016-04-21 (New)" ;
     rdfs:subClassOf bf:VariantTitle ;
     skos:definition "Title for a compilation of resources." .
+
+bf:CopyrightNumber a owl:Class ;
+    rdfs:label "Copyright-legal deposit number" ;
+    dcterms:modified "2016-04-21 (New)" ;
+    rdfs:subClassOf bf:Identifier ;
+    skos:definition "Identifier assigned to a copyright registration or legal deposit." .
 
 bf:Dataset a owl:Class ;
     rdfs:label "Dataset" ;
@@ -843,11 +849,12 @@ bf:copyrightDate a owl:DatatypeProperty ;
     skos:definition "Date associated with a claim of protection under copyright or a similar regime." .
 
 bf:copyrightRegistration a owl:ObjectProperty ;
-    rdfs:label "Copyright and legal deposit information" ;
-    dcterms:modified "2016-04-21 (New)" ;
+    rdfs:label "Copyright registration information" ;
+    dcterms:modified "2016-04-21 (New)",
+        "2016-05-04 (Corrected expected value)" ;
     rdfs:comment "Used with Work or Instance" ;
-    rdfs:range bf:CopyrightNumber ;
-    skos:definition "Copyright and Legal Deposit information" .
+    rdfs:range bf:CopyrightRegistration ;
+    skos:definition "Copyright and Legal Deposit registration information" .
 
 bf:count a owl:DatatypeProperty ;
     rdfs:label "Number of units" ;
@@ -1733,14 +1740,12 @@ bf:Content a owl:Class ;
     rdfs:subClassOf rdfs:Resource ;
     skos:definition "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived." .
 
-bf:CopyrightNumber a owl:Class ;
-    rdfs:label "Copyright registration",
-        "Copyright-legal deposit number" ;
-    dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Identifier,
-        rdfs:Resource ;
-    skos:definition "Copyright and Legal Deposit information",
-        "Identifier assigned to a copyright registration or legal deposit." .
+bf:CopyrightRegistration a owl:Class ;
+    rdfs:label "Copyright registration" ;
+    dcterms:modified "2016-04-21 (New)",
+        "2016-05-04 (Class name corrected)" ;
+    rdfs:subClassOf rdfs:Resource ;
+    skos:definition "Copyright or Legal Deposit registration information" .
 
 bf:CoverArt a owl:Class ;
     rdfs:label "Cover art" ;
@@ -1794,7 +1799,8 @@ bf:Generation a owl:Class ;
 
 bf:GenerationProcess a owl:Class ;
     rdfs:label "Generation process" ;
-    dcterms:modified "2016-04-21 (New)" ;
+    dcterms:modified "2016-04-21 (New)",
+        "2016-04-24 (fixed class name)" ;
     rdfs:subClassOf bf:AdminMetadata ;
     skos:definition "Indication of the program or process used to generate the description by application of a particular transformation." .
 
