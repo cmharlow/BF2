@@ -9,9 +9,9 @@
 
 bf: a owl:Ontology ;
     rdfs:label "BIBFRAME vocabulary" ;
-    dcterms:modified "2016-05-04T12:58:16.109-04:00" ;
+    dcterms:modified "2016-05-13T16:27:29.643-04:00" ;
     owl:imports <http://id.loc.gov/vocabulary/relators> ;
-    owl:versionInfo "2016-05-04T12:58:16.109-04:00"^^xsd:string .
+    owl:versionInfo "2016-05-13T16:27:29.643-04:00"^^xsd:string .
 
 bf:AbbreviatedTitle a owl:Class ;
     rdfs:label "Abbreviated title" ;
@@ -1183,7 +1183,7 @@ bf:issuance a owl:ObjectProperty ;
     rdfs:range bf:Issuance ;
     skos:definition "Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination." .
 
-bf:issuedWith a owl:ObjectProperty ;
+bf:issuedWith a owl:SymmetricProperty ;
     rdfs:label "Issued with" ;
     dcterms:modified "2016-04-21 (New)" ;
     rdfs:domain bf:Instance ;
@@ -1341,7 +1341,16 @@ bf:originPlace a owl:ObjectProperty ;
     rdfs:subPropertyOf bf:place ;
     skos:definition "Place from which the creation of the Work originated." .
 
-bf:otherPhysicalFormat a owl:ObjectProperty ;
+bf:otherEdition a owl:SymmetricProperty ;
+    rdfs:label "Other edition" ;
+    dcterms:modified "2016-04-21 (New)",
+        "2016-05-13 (symmetrical)" ;
+    rdfs:comment "Expected value Work or Instance",
+        "Used with Work or Instance" ;
+    rdfs:subPropertyOf bf:derivativeOf ;
+    skos:definition "Resource has other available editions, for example simultaneously published language editions or reprints." .
+
+bf:otherPhysicalFormat a owl:SymmetricProperty ;
     rdfs:label "Has other physical format" ;
     dcterms:modified "2016-04-21 (New)" ;
     rdfs:domain bf:Instance ;
@@ -1689,7 +1698,7 @@ bf:voiceType a owl:DatatypeProperty ;
 bf:AppliedMaterial a owl:Class ;
     rdfs:label "Applied material" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Physical or chemical substance applied to a base material of a resource." .
 
 bf:AspectRatio a owl:Class ;
@@ -1707,13 +1716,13 @@ bf:Barcode a owl:Class ;
 bf:BaseMaterial a owl:Class ;
     rdfs:label "Base material" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Underlying physical material of a resource." .
 
 bf:BookFormat a owl:Class ;
     rdfs:label "Book format" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Result of folding a printed sheet to form a gathering of leaves." .
 
 bf:Capture a owl:Class ;
@@ -1770,19 +1779,19 @@ bf:DescriptionConventions a owl:Class ;
 bf:Emulsion a owl:Class ;
     rdfs:label "Emulsion" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide." .
 
 bf:Extent a owl:Class ;
     rdfs:label "Extent" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Number and type of units and/or subunits making up a resource." .
 
 bf:FontSize a owl:Class ;
     rdfs:label "Font size" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Size of the type used to represent the characters and symbols in a resource." .
 
 bf:Frequency a owl:Class ;
@@ -1794,7 +1803,7 @@ bf:Frequency a owl:Class ;
 bf:Generation a owl:Class ;
     rdfs:label "Generation" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Relationship between an original carrier and the carrier of a reproduction made from the original." .
 
 bf:GenerationProcess a owl:Class ;
@@ -1831,7 +1840,7 @@ bf:Issuance a owl:Class ;
 bf:Layout a owl:Class ;
     rdfs:label "Layout" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Arrangement of text, images, tactile notation, etc., in a resource." .
 
 bf:Media a owl:Class ;
@@ -1843,7 +1852,7 @@ bf:Media a owl:Class ;
 bf:Mount a owl:Class ;
     rdfs:label "Mount" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Physical material used for the support or backing to which the base material of a resource has been attached." .
 
 bf:MusicFormat a owl:Class ;
@@ -1861,19 +1870,19 @@ bf:MusicMedium a owl:Class ;
 bf:Polarity a owl:Class ;
     rdfs:label "Polarity" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Relationship of the colors and tones in an image to the colors and tones of the object reproduced." .
 
 bf:ProductionMethod a owl:Class ;
     rdfs:label "Production method" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Process used to produce a resource" .
 
 bf:ReductionRatio a owl:Class ;
     rdfs:label "Reduction ratio" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf bf:Instance ;
+    rdfs:subClassOf rdfs:Resource ;
     skos:definition "Size of a micro-image in relation to the original from which it was produced." .
 
 bf:Review a owl:Class ;
@@ -2180,26 +2189,6 @@ bf:originalVersionOf a owl:ObjectProperty ;
     owl:inverseOf bf:originalVersion ;
     skos:definition "Original version of a resource." .
 
-bf:otherEdition a owl:ObjectProperty ;
-    rdfs:label "Other edition" ;
-    dcterms:modified "2016-04-21 (New)",
-        "2016-04-29 (added inverse, updated range)" ;
-    rdfs:comment "Expected value Work or Instance",
-        "Used with Work or Instance" ;
-    rdfs:subPropertyOf bf:derivativeOf ;
-    owl:inverseOf bf:otherEditionOf ;
-    skos:definition "Resource has other available editions, for example simultaneously published language editions or reprints." .
-
-bf:otherEditionOf a owl:ObjectProperty ;
-    rdfs:label "Other edition of" ;
-    dcterms:modified "2016-04-21 (New)",
-        "2016-04-29 (added inverse, updated range)" ;
-    rdfs:comment "Expected value Work or Instance",
-        "Used with Work or Instance" ;
-    rdfs:subPropertyOf bf:hasDerivative ;
-    owl:inverseOf bf:otherEdition ;
-    skos:definition "Resource is an edition of another resource." .
-
 bf:place a owl:ObjectProperty ;
     rdfs:label "Place" ;
     dcterms:modified "2016-04-21 (New)" ;
@@ -2409,7 +2398,17 @@ bf:VideoCharacteristic a owl:Class ;
     rdfs:subClassOf rdfs:Resource ;
     skos:definition "Technical specification relating to the encoding of video images in a resource." .
 
-bf:hasEquivalent a owl:ObjectProperty ;
+bf:hasDerivative a owl:ObjectProperty ;
+    rdfs:label "Has derivative" ;
+    dcterms:modified "2016-04-21 (New)",
+        "2016-04-29 (added inverse)" ;
+    rdfs:comment "Expected value Work or Instance",
+        "Used with Work or Instance" ;
+    rdfs:subPropertyOf bf:relatedTo ;
+    owl:inverseOf bf:derivativeOf ;
+    skos:definition "Resource that is a modification of the described work." .
+
+bf:hasEquivalent a owl:SymmetricProperty ;
     rdfs:label "Equivalence" ;
     dcterms:modified "2016-04-21 (New)" ;
     rdfs:comment "Expected value Work, Instance or Item",
@@ -2468,16 +2467,6 @@ bf:derivativeOf a owl:ObjectProperty ;
     rdfs:subPropertyOf bf:relatedTo ;
     owl:inverseOf bf:hasDerivative ;
     skos:definition "Source work from which the described resource is derived." .
-
-bf:hasDerivative a owl:ObjectProperty ;
-    rdfs:label "Has derivative" ;
-    dcterms:modified "2016-04-21 (New)",
-        "2016-04-29 (added inverse)" ;
-    rdfs:comment "Expected value Work or Instance",
-        "Used with Work or Instance" ;
-    rdfs:subPropertyOf bf:relatedTo ;
-    owl:inverseOf bf:derivativeOf ;
-    skos:definition "Resource that is a modification of the described work." .
 
 bf:Notation a owl:Class ;
     rdfs:label "Notation" ;
@@ -2547,7 +2536,7 @@ bf:succeededBy a owl:ObjectProperty ;
     skos:definition "Resource that succeeds the resource being described, e.g., later in time or after in a narrative." .
 
 bf:Title a owl:Class ;
-    rdfs:label "Title Entity" ;
+    rdfs:label "Title entity" ;
     dcterms:modified "2016-04-21 (New)" ;
     rdfs:subClassOf rdfs:Resource ;
     skos:definition "Title information relating to a resource: mail title, translated title, or variant form of title." .
@@ -2572,8 +2561,9 @@ bf:Item a owl:Class ;
 
 bf:Agent a owl:Class ;
     rdfs:label "Agent" ;
-    dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf rdfs:Resource ;
+    dcterms:modified "2016-04-21 (New)",
+        "2016-05-13 (New subclass)" ;
+    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
     skos:definition "Entity having a role in a resource, such as a person or organization." .
 
 bf:Classification a owl:Class ;
@@ -2588,7 +2578,7 @@ bf:AdminMetadata a owl:Class ;
     rdfs:subClassOf rdfs:Resource ;
     skos:definition "Metadata about the metadata, especially provenance information." .
 
-bf:relatedTo a owl:ObjectProperty ;
+bf:relatedTo a owl:SymmetricProperty ;
     rdfs:label "Related resource" ;
     dcterms:modified "2016-04-21 (New)" ;
     rdfs:domain rdfs:Resource ;
