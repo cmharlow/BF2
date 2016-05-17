@@ -2,11 +2,12 @@ import rdflib
 from rdflib.namespace import DCTERMS
 from git import Repo
 import os
-import os
 from apscheduler.schedulers.blocking import BlockingScheduler
 import argparse
 
 sched = BlockingScheduler()
+
+
 @sched.scheduled_job('interval', minutes=60)
 def scheduled_job():
     main()
@@ -14,7 +15,9 @@ def scheduled_job():
 bf2url = 'http://id.loc.gov/ontologies/bibframe.rdf'
 bfURI = 'http://id.loc.gov/ontologies/bibframe/'
 
-os.remove('.git/config.lock')
+if os.path.isfile('.git/config.lock'):
+    os.remove('.git/config.lock')
+
 repo = Repo('/Users/Christina/Projects/BF2')
 config = repo.config_writer()
 config.set_value("user", "email", "cmharlow@gmail.com")
@@ -66,6 +69,8 @@ def main():
         print(message)
         index.commit(message)
         o.push()
+    else:
+        print('No updates captured.')
 
 
 if __name__ == '__main__':
