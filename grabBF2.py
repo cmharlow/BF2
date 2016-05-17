@@ -15,15 +15,6 @@ def scheduled_job():
 bf2url = 'http://id.loc.gov/ontologies/bibframe.rdf'
 bfURI = 'http://id.loc.gov/ontologies/bibframe/'
 
-if os.path.isfile('.git/config.lock'):
-    os.remove('.git/config.lock')
-
-repo = Repo('/Users/brighid/Projects/BF2')
-config = repo.config_writer()
-config.set_value("user", "email", "cmharlow@gmail.com")
-config.set_value("user", "name", "cmh2166")
-index = repo.index
-
 
 def writeBF2(graph):
     """Grab most recent BF2 spec from id.loc.gov, serialize for comparison."""
@@ -79,8 +70,20 @@ if __name__ == '__main__':
                         default=False, help="use scheduler to run")
     parser.add_argument("-m", "--man", action="store_true", dest="man",
                         default=False, help="run manually")
+    parser.add_argument("-r", "--repo", dest="repo",
+                        default="/Users/Christina/Projects/BF2",
+                        help="repo working directory")
 
     args = parser.parse_args()
+
+    if os.path.isfile('.git/config.lock'):
+        os.remove('.git/config.lock')
+    repo = Repo(args.repo)
+    config = repo.config_writer()
+    config.set_value("user", "email", "cmharlow@gmail.com")
+    config.set_value("user", "name", "cmh2166")
+    index = repo.index
+
     if not args.sched and not args.man:
         parser.print_help()
         exit()
