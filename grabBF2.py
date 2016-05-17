@@ -18,7 +18,7 @@ bfURI = 'http://id.loc.gov/ontologies/bibframe/'
 if os.path.isfile('.git/config.lock'):
     os.remove('.git/config.lock')
 
-repo = Repo('/Users/Christina/Projects/BF2')
+repo = Repo('/Users/brighid/Projects/BF2')
 config = repo.config_writer()
 config.set_value("user", "email", "cmharlow@gmail.com")
 config.set_value("user", "name", "cmh2166")
@@ -38,8 +38,7 @@ def diffDate(oldBF, newBF):
         for obj in oldBF.objects((None, DCTERMS.modified)):
             oldBFdate = obj.toPython()
     else:
-        oldBFdate = oldBF.toPython()
-    print(oldBFdate)
+        oldBFdate = oldBFdate.toPython()
     newBFdate = newBF.value(rdflib.URIRef(bfURI), DCTERMS.modified).toPython()
     if oldBFdate == newBFdate:
         return(False, None)
