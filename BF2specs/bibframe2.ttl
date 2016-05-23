@@ -9,9 +9,9 @@
 
 bf: a owl:Ontology ;
     rdfs:label "BIBFRAME vocabulary" ;
-    dcterms:modified "2016-05-13T16:27:29.643-04:00" ;
+    dcterms:modified "2016-05-20T15:31:13.103-04:00" ;
     owl:imports <http://id.loc.gov/vocabulary/relators> ;
-    owl:versionInfo "2016-05-13T16:27:29.643-04:00"^^xsd:string .
+    owl:versionInfo "2016-05-20T15:31:13.103-04:00"^^xsd:string .
 
 bf:AbbreviatedTitle a owl:Class ;
     rdfs:label "Abbreviated title" ;
@@ -888,7 +888,7 @@ bf:credits a owl:DatatypeProperty ;
 bf:custodialHistory a owl:DatatypeProperty ;
     rdfs:label "Custodial history" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:comment "Used with Work or Instance" ;
+    rdfs:comment "Used with Work, Instance or Item" ;
     rdfs:range rdfs:Literal ;
     skos:definition "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource." .
 
