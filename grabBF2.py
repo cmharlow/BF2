@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import rdflib
 from rdflib.namespace import DCTERMS
 from git import Repo
