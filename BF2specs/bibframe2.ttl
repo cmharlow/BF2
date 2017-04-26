@@ -9,8 +9,8 @@
 
 bf: a owl:Ontology ;
     rdfs:label "BIBFRAME vocabulary" ;
-    dcterms:modified "2017-03-10T12:04:35.059-05:00" ;
-    owl:versionInfo "2017-03-10T12:04:35.059-05:00"^^xsd:string .
+    dcterms:modified "2017-03-15T16:23:59.852-04:00" ;
+    owl:versionInfo "2017-03-15T16:23:59.852-04:00"^^xsd:string .
 
 bf:AbbreviatedTitle a owl:Class ;
     rdfs:label "Abbreviated title" ;
@@ -132,11 +132,6 @@ bf:CollectiveTitle a owl:Class ;
     dcterms:modified "2016-04-21 (New)" ;
     rdfs:subClassOf bf:VariantTitle ;
     skos:definition "Title for a compilation of resources." .
-
-bf:ContentAccessibility a owl:Class ;
-    rdfs:label "Content accessibility information" ;
-    dcterms:modified "2017-02-07 (New)" ;
-    skos:definition "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions." .
 
 bf:CopyrightNumber a owl:Class ;
     rdfs:label "Copyright-legal deposit number" ;
@@ -836,9 +831,10 @@ bf:content a owl:ObjectProperty ;
 bf:contentAccessibility a owl:ObjectProperty ;
     rdfs:label "Content accessibility information" ;
     dcterms:modified "2016-04-21 (New)",
-        "2017-02-03 (changed from data to object property)" ;
+        "2017-02-03 (changed from data to object property)",
+        "2017-03-15 fixed typo in range" ;
     rdfs:comment "Used with Work or Instance" ;
-    rdfs:range bf:ContentAccessability ;
+    rdfs:range bf:ContentAccessibility ;
     skos:definition "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions." .
 
 bf:contribution a owl:ObjectProperty ;
@@ -1764,6 +1760,11 @@ bf:Content a owl:Class ;
     rdfs:label "Content type" ;
     dcterms:modified "2016-04-21 (New)" ;
     skos:definition "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived." .
+
+bf:ContentAccessibility a owl:Class ;
+    rdfs:label "Content accessibility information" ;
+    dcterms:modified "2017-02-07 (New)" ;
+    skos:definition "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions." .
 
 bf:CopyrightRegistration a owl:Class ;
     rdfs:label "Copyright registration" ;
