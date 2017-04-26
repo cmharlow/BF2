@@ -60,7 +60,7 @@ def get_bf(repo_dir, filename, cid):
 
 
 def compare_lists(a, b):
-    """Compare lists, return counts of entries ni both, a_only, b_only."""
+    """Compare lists, return counts of entries in both, a_only, b_only."""
     both = 0
     a_only = 0
     b_only = 0
@@ -91,10 +91,10 @@ set ticslevel 0.5
 
 set xlabel "Date"
 set timefmt "%Y-%m-%d"
-set format x "%Y-%m-%d"
+set format x "%Y-%m"
 set xdata time
 set xrange ["{start_date}" : "{end_date}"]
-set boxwidth 70000 absolute  #just under a day
+set boxwidth 150000 absolute  # a bit over a day
 
 set ylabel "Fraction of triples changed (%)"
 set yrange [-{max_deleted} : {max_added}]
@@ -105,19 +105,19 @@ set output '{graphfile}'
 
 plot \
 "{datafile}" using 1:(100.0*$3/$2) \
-title "added triples" with boxes fs solid 0.7, \
+title "added triples" with boxes fs solid 0.7 lc rgb "#11AA00", \
 "{datafile}" using 1:(-100.0*$4/$2) \
-title "deleted triples" with boxes fs solid 0.7
+title "deleted triples" with boxes fs solid 0.7 lc rgb "#AA1100"
 '''
 
 
 p = optparse.OptionParser(description='BF2 change tracking tool',
                           usage='usage: %prog [options] (-h for help)')
-p.add_option('--datafile',  default='BF2_triples_changes.dat',
+p.add_option('--datafile', default='BF2_triples_changes.dat',
              help='data file to write to [default %default]')
-p.add_option('--gnufile',  default='BF2_triples_changes.gnu',
+p.add_option('--gnufile', default='BF2_triples_changes.gnu',
              help='gnuplot file to write to [default %default]')
-p.add_option('--graphfile',  default='BF2_triples_changes.png',
+p.add_option('--graphfile', default='BF2_triples_changes.png',
              help='graph file to write to [default %default]')
 p.add_option('--no-graph', '-g', action='store_true',
              help='do not run gnuplot to make graph')
@@ -142,7 +142,7 @@ with tempfile.TemporaryDirectory() as tmp_dir:
     with open(opts.datafile, 'w') as dfh:
         last_bf = None
         dfh.write("# Number of changes BF ontology (from ntriples lines)\n")
-        dfh.write("#date     same added deleted   (wrt previous version)\n")
+        dfh.write("#date     same added deleted (wrt previous version)  num\n")
         for date in sorted(commits.keys()):
             cid = commits[date]
             logging.info("Looking at commit %s -> %s" % (date, commits[date]))
@@ -153,7 +153,8 @@ with tempfile.TemporaryDirectory() as tmp_dir:
                 (same, deleted, added) = compare_lists(last_bf, bf)
                 max_deleted = max(deleted / same, max_deleted)
                 max_added = max(added / same, max_added)
-                dfh.write("%10s  %8d %8d %8d\n" % (date, same, added, deleted))
+                dfh.write("%10s  %8d %8d %8d  %8d\n" %
+                          (date, same, added, deleted, len(bf)))
             last_bf = bf
             latest_date = date
 
@@ -162,8 +163,8 @@ if (not opts.no_graph):
     with open(opts.gnufile, 'w') as gfh:
         gfh.write(GNUPLOT.format(datafile=opts.datafile,
                                  graphfile=opts.graphfile,
-                                 start_date=date_inc(earliest_date, -7),
-                                 end_date=date_inc(latest_date, 7),
-                                 max_deleted=int(max_deleted*120),
-                                 max_added=int(max_added*120)))
+                                 start_date=date_inc(earliest_date, -30),
+                                 end_date=date_inc(latest_date, 30),
+                                 max_deleted=int(max_deleted * 120),
+                                 max_added=int(max_added * 120)))
     subprocess.run('gnuplot %s' % (opts.gnufile), shell=True)
