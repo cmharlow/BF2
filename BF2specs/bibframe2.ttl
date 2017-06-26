@@ -9,8 +9,8 @@
 
 bf: a owl:Ontology ;
     rdfs:label "BIBFRAME vocabulary" ;
-    dcterms:modified "2017-03-15T16:23:59.852-04:00" ;
-    owl:versionInfo "2017-03-15T16:23:59.852-04:00"^^xsd:string .
+    dcterms:modified "2017-05-04T14:49:12.796-04:00" ;
+    owl:versionInfo "2017-05-04T14:49:12.796-04:00"^^xsd:string .
 
 bf:AbbreviatedTitle a owl:Class ;
     rdfs:label "Abbreviated title" ;
@@ -448,7 +448,8 @@ bf:ParallelTitle a owl:Class ;
 bf:Person a owl:Class ;
     rdfs:label "Person" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+    rdfs:subClassOf bf:Agent,
+        <http://xmlns.com/foaf/0.1/Person> ;
     skos:definition "Individual or identity established by an individual (either alone or in collaboration with one or more other individuals)." .
 
 bf:PlaybackChannels a owl:Class ;
@@ -1009,7 +1010,6 @@ bf:electronicLocator a owl:ObjectProperty ;
     rdfs:label "Electronic location" ;
     dcterms:modified "2016-04-21 (New)" ;
     rdfs:domain bf:Item ;
-    rdfs:range rdfs:Resource ;
     skos:definition "Electronic location from which the resource is available." .
 
 bf:emulsion a owl:ObjectProperty ;
@@ -1146,14 +1146,6 @@ bf:historyOfWork a owl:DatatypeProperty ;
     rdfs:domain bf:Work ;
     rdfs:range rdfs:Literal ;
     skos:definition "Information about the history of a Work." .
-
-bf:identifies a owl:ObjectProperty ;
-    rdfs:label "Resouce identified" ;
-    dcterms:modified "2017-02-03 (New inverse)" ;
-    rdfs:domain bf:Identifier ;
-    rdfs:range rdfs:Resource ;
-    owl:inverseOf bf:identifiedBy ;
-    skos:definition "Resource that is associated with a character string that serves to differentiate one resource from another." .
 
 bf:illustrativeContent a owl:ObjectProperty ;
     rdfs:label "Illustrative content information" ;
@@ -1579,7 +1571,6 @@ bf:subject a owl:ObjectProperty ;
     rdfs:label "Subject" ;
     dcterms:modified "2016-04-21 (New)" ;
     rdfs:comment "Used with Work, Instance or Item" ;
-    rdfs:range rdfs:Resource ;
     skos:definition "Subject term(s) describing a resource." .
 
 bf:sublocation a owl:ObjectProperty ;
@@ -2131,10 +2122,19 @@ bf:hasSubseries a owl:ObjectProperty ;
 
 bf:identifiedBy a owl:ObjectProperty ;
     rdfs:label "Identifier" ;
-    dcterms:modified "2016-04-21 (New)" ;
+    dcterms:modified "2016-04-21 (New)",
+        "2017-05-04 (New inverse)" ;
     rdfs:comment "Used with Unspecified" ;
     rdfs:range bf:Identifier ;
+    owl:inverseOf bf:identifies ;
     skos:definition "Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity." .
+
+bf:identifies a owl:ObjectProperty ;
+    rdfs:label "Resouce identified" ;
+    dcterms:modified "2017-02-03 (New inverse)" ;
+    rdfs:domain bf:Identifier ;
+    owl:inverseOf bf:identifiedBy ;
+    skos:definition "Resource that is associated with a character string that serves to differentiate one resource from another." .
 
 bf:index a owl:ObjectProperty ;
     rdfs:label "Has index" ;
@@ -2555,13 +2555,6 @@ bf:succeededBy a owl:ObjectProperty ;
     owl:inverseOf bf:precededBy ;
     skos:definition "Resource that succeeds the resource being described, e.g., later in time or after in a narrative." .
 
-bf:Agent a owl:Class ;
-    rdfs:label "Agent" ;
-    dcterms:modified "2016-04-21 (New)",
-        "2016-05-13 (New subclass)" ;
-    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
-    skos:definition "Entity having a role in a resource, such as a person or organization." .
-
 bf:Item a owl:Class ;
     rdfs:label "Item" ;
     dcterms:modified "2016-04-21 (New)" ;
@@ -2571,6 +2564,13 @@ bf:SoundCharacteristic a owl:Class ;
     rdfs:label "Sound characteristic" ;
     dcterms:modified "2016-04-21 (New)" ;
     skos:definition "Technical specification relating to the encoding of sound in a resource." .
+
+bf:Agent a owl:Class ;
+    rdfs:label "Agent" ;
+    dcterms:modified "2016-04-21 (New)",
+        "2016-05-13 (New subclass)" ;
+    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+    skos:definition "Entity having a role in a resource, such as a person or organization." .
 
 bf:DigitalCharacteristic a owl:Class ;
     rdfs:label "Digital characteristic" ;
@@ -2590,8 +2590,6 @@ bf:AdminMetadata a owl:Class ;
 bf:relatedTo a owl:SymmetricProperty ;
     rdfs:label "Related resource" ;
     dcterms:modified "2016-04-21 (New)" ;
-    rdfs:domain rdfs:Resource ;
-    rdfs:range rdfs:Resource ;
     skos:definition "Any relationship between Work, Instance, and Item resources." .
 
 bf:Work a owl:Class ;
