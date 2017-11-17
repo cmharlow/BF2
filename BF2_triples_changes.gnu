@@ -8,7 +8,7 @@ set xlabel "Date"
 set timefmt "%Y-%m-%d"
 set format x "%Y-%m"
 set xdata time
-set xrange ["2016-03-28" : "2017-04-13"]
+set xrange ["2016-03-28" : "2017-07-26"]
 set boxwidth 150000 absolute  # a bit over a day
 
 set ylabel "Fraction of triples changed (%)"
